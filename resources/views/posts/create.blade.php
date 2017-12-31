@@ -9,24 +9,23 @@
 @section('content')
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <h1>Create New Post</h1>
-            <hr>
+            <div class="panel panel-default">
+                <div class="panel-heading" style="background: #fff;">Create your post</div>
+                <div class="panel-body">
+                    {!! Form::open(array('route' => 'posts.store', 'data-parsley-validate' => '')) !!}
 
-            {!! Form::open(array('route' => 'posts.store', 'data-parsley-validate' => '')) !!}
+                    {{ Form::text('title', null, array('class' => 'form-control', 'placeholder' => 'Title', 'required' => '', 'maxlength' => '255')) }}
 
-            {{ Form::label('title', 'Title:') }}
-            {{ Form::text('title', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
+                    {{ Form::text('slug', null, array('class' => 'form-control form-spacing-top', 'placeholder' => 'Slug', 'required' => '', 'minlength' => '5',
+                    'maxlength' => '255')) }}
 
-            {{ Form::label('slug', 'Slug:') }}
-            {{ Form::text('slug', null, array('class' => 'form-control', 'required' => '', 'minlength' => '5',
-            'maxlength' => '255')) }}
+                    {{ Form::textarea('body', null, array('class' => 'form-control form-spacing-top', 'placeholder' => 'Body', 'required' => '')) }}
 
-            {{ Form::label('body', 'Post Body:', array('style' => 'margin-top: 20px;')) }}
-            {{ Form::textarea('body', null, array('class' => 'form-control', 'required' => '')) }}
+                    {{ Form::submit('Create Post', array('class' => 'btn btn-success btn-lg btn-block form-spacing-top')) }}
 
-            {{ Form::submit('Create Post', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top: 20px;')) }}
-
-            {!! Form::close() !!}
+                    {!! Form::close() !!}
+                </div>
+            </div>
         </div>
     </div>
 @endsection

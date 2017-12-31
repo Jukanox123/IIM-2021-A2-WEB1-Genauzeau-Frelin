@@ -1,7 +1,15 @@
+body {
+    font-family: Raleway, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #636b6f;
+    background-color: #f5f8fa;
+}
+
 .btn-h1-spacing {
     margin-top: 18px;
 }
 
 .form-spacing-top {
-    margin-top: 30px;
+    margin-top: 15px;
 }
