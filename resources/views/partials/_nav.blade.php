@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Laravel Blog</a>
+            <a class="navbar-brand" href="/">Laravel Blog</a>
         </div>
 
         <div id="bs-example-navbar-collapse-1" class="navbar-collapse collapse">
@@ -28,6 +28,7 @@
                            aria-expanded="false">Hello {{ Auth::user()->name }}<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ route('posts.index') }}">Posts</a></li>
+                            <li><a href="{{ route('categories.index') }}">Categories</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="{{ route('logout') }}">Logout</a></li>
                         </ul>
