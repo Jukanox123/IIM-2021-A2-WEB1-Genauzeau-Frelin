@@ -12,9 +12,9 @@
 */
 
 // Authentication Routes
-Route::get('auth/login', 'Auth\LoginController@showLoginForm');
+Route::get('auth/login', ['as' => 'login', 'uses' => 'Auth\LoginController@showLoginForm']);
 Route::post('auth/login', 'Auth\LoginController@login');
-Route::get('auth/logout', 'Auth\LoginController@logout');
+Route::get('auth/logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout']);
 
 // Registration Routes
 Route::get('auth/register', 'Auth\RegisterController@ShowRegistrationForm');
@@ -30,6 +30,3 @@ Route::resource('posts', 'PostController');
 Route::group(['middleware' => ['web']], function () {
     //
 });
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
