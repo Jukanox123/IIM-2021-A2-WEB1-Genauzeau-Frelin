@@ -6,6 +6,29 @@ body {
     background-color: #f5f8fa;
 }
 
+/**************** SVG Background ****************/
+
+svg {
+    min-height: 10vh;
+    background: #0F7173;
+}
+
+#scales {
+    fill: #0F7173;
+}
+
+#inner {
+    stroke: #0c4c4d;
+    stroke-width: 3.1;
+}
+
+#outer {
+    stroke: #098f92;
+    stroke-width: 0.9;
+}
+
+/**************** /SVG Background ****************/
+
 .btn-h1-spacing {
     margin-top: 18px;
 }

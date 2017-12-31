@@ -7,6 +7,7 @@
 
 <body>
 
+@include('partials._svg')
 @include('partials._nav')
 
 <div class="container">
@@ -18,7 +19,6 @@
 </div>
 
 @include('partials._javascript')
-
 @yield('scripts')
 
 </body>

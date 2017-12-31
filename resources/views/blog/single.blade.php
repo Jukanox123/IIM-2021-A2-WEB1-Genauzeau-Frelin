@@ -7,6 +7,8 @@
         <div class="col-md-8 col-md-offset-2">
             <h1 class="text-center">{{ $post->title }}</h1>
             <p class="text-justify">{{ $post->body }}</p>
+            <hr>
+            <p>Posted In: {{ $post->category->name }}</p>
         </div>
     </div>
 @endsection
