@@ -18,6 +18,13 @@
 
                     {{ Form::text('slug', null, array('class' => 'form-control form-spacing-top', 'placeholder' => 'Slug', 'required' => '', 'minlength' => '5',
                     'maxlength' => '255')) }}
+                    <hr>
+                    <h4 class="text-center">Category</h4>
+                    <select name="category_id" class="form-control">
+                        @foreach($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endforeach
+                    </select>
 
                     {{ Form::textarea('body', null, array('class' => 'form-control form-spacing-top', 'placeholder' => 'Body', 'required' => '')) }}
 

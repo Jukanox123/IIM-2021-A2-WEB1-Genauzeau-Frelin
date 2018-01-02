@@ -26,7 +26,7 @@
         </div>
 
         <div class="col-md-3">
-            <div class="well">
+            <div class="well well-spacing-top">
                 {!! Form::open(['route' => 'categories.store', 'method' => 'POST']) !!}
 
                 <h2 class="text-center">New Category</h2>
