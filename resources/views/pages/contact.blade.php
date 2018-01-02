@@ -5,25 +5,23 @@
 @section('content')
     <div class="row">
         <div class="col-md-12">
-            <h1>Contact Me</h1>
+            <h1 class="text-center">Contact Me</h1>
             <hr>
-            <form>
+            <form action="{{ url('contact') }}" method="POST">
+                {{ csrf_field() }}
                 <div class="form-group">
-                    <label name="email">Email:</label>
-                    <input id="email" name="email" class="form-control">
+                    <input id="email" name="email" class="form-control" placeholder="Email">
                 </div>
 
                 <div class="form-group">
-                    <label name="email">Subject:</label>
-                    <input id="email" name="subject" class="form-control">
+                    <input id="email" name="subject" class="form-control" placeholder="Subject">
                 </div>
 
                 <div class="form-group">
-                    <label name="email">Message:</label>
-                    <input id="email" name="message" class="form-control">
+                    <textarea id="message" name="message" class="form-control" placeholder="Message"></textarea>
                 </div>
 
-                <input type="submit" value="Send Message" class="btn btn-success">
+                <input type="submit" value="Send Message" class="btn btn-success btn-block">
             </form>
         </div>
     </div>
