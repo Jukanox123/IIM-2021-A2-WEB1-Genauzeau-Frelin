@@ -6,9 +6,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="jumbotron">
-                <h1>Welcome to My Blog!</h1>
-                <p class="lead">Thanks vor visiting!</p>
-                <p><a href="#" role="button" class="btn btn-primary btn-lg">Popular Post</a></p>
+                <h1 class="text-center">Welcome to our Laravel Blog!</h1>
             </div>
         </div>
     </div>
@@ -27,10 +25,6 @@
 
             @endforeach
 
-        </div>
-
-        <div class="col-md3 col-md-offset-1">
-            <h2>Sidebar</h2>
         </div>
     </div>
 @endsection

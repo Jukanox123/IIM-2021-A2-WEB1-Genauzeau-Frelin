@@ -1,5 +1,5 @@
 <!-- Static navbar -->
-<nav class="navbar navbar-default" style="margin-top: -6px;">
+<nav class="navbar navbar-default">
     <div class="container-fluid">
 
         <div class="navbar-header">

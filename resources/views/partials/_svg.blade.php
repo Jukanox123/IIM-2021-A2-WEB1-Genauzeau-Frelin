@@ -1,4 +1,4 @@
-<svg width="100%" height="100%">
+<svg width="100%" height="100%" style="margin-bottom: -6px;">
     <defs>
         <pattern id="scales" width="30" height="30" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
             <g id="curves">
