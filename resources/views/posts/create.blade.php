@@ -11,9 +11,10 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background: #fff;">Create your post</div>
+                <div class="panel-heading" style="background: #fff;">Create New Post</div>
                 <div class="panel-body">
-                    {!! Form::open(array('route' => 'posts.store', 'data-parsley-validate' => '')) !!}
+
+                    {!! Form::open(array('route' => 'posts.store', 'data-parsley-validate' => '', 'files' => true)) !!}
 
                     {{ Form::text('title', null, array('class' => 'form-control', 'placeholder' => 'Title', 'required' => '', 'maxlength' => '255')) }}
 
@@ -37,6 +38,8 @@
                             <option value="{{ $tag->id }}">{{ $tag->name }}</option>
                         @endforeach
                     </select>
+
+                    {{ Form::file('featured_image', array('class' => 'form-spacing-top')) }}
 
                     {{ Form::textarea('body', null, array('class' => 'form-control form-spacing-top', 'placeholder' => 'Body', 'required' => '')) }}
 

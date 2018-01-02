@@ -5,6 +5,7 @@
 @section('content')
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
+            <img src="{{ asset('images/' . $post->image) }}" height="400" width="750">
             <h1 class="text-center">{{ $post->title }}</h1>
             <p class="text-justify">{{ $post->body }}</p>
             <hr>
@@ -23,7 +24,8 @@
             @foreach($post->comments as $comment)
                 <div class="comment">
                     <div class="author-info">
-                        <img src="{{ "https://www.gravatar.com/avatar/" . md5(trim($comment->email)) . "?s=50&d=wavatar" }}" class="author-image">
+                        <img src="{{ "https://www.gravatar.com/avatar/" . md5(trim($comment->email)) . "?s=50&d=wavatar" }}"
+                             class="author-image">
                         <div class="author-name">
                             <h4>{{ $comment->name }}</h4>
                             <p class="author-time">{{ date('F nS, Y - g:iA', strtotime($comment->created_at)) }}</p>

@@ -9,23 +9,20 @@
 @section('content')
 
     <div class="row">
-        {!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT']) !!}
+        {!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT', 'files' => true]) !!}
 
         <div class="col-md-8">
-            {{ Form::label('title', 'Title:') }}
-            {{ Form::text('title', null, ['class' => 'form-control input-lg']) }}
+            {{ Form::text('title', null, ['class' => 'form-control input-lg', 'placeholder' => 'Title']) }}
 
-            {{ Form::label('slug', 'Slug:', ['class' => 'form-spacing-top']) }}
-            {{ Form::text('slug', null, ['class' => 'form-control']) }}
+            {{ Form::text('slug', null, ['class' => 'form-control form-spacing-top', 'placeholder' => 'Slug']) }}
 
-            {{ Form::label('category_id', 'Category:', ['class' => 'form-spacing-top']) }}
-            {{ Form::select('category_id', $categories, null, ['class' => 'form-control']) }}
+            {{ Form::select('category_id', $categories, null, ['class' => 'form-control form-spacing-top', 'placeholder' => 'Category']) }}
+            <br>
+            {{ Form::select('tags[]', $tags, null, ['class' => 'form-control select2-multi', 'placeholder' => 'Tags', 'multiple' => 'multiple']) }}
 
-            {{ Form::label('tags', 'Tags:', ['class' => 'form-spacing-top']) }}
-            {{ Form::select('tags[]', $tags, null, ['class' => 'form-control select2-multi', 'multiple' => 'multiple']) }}
+            {{ Form::file('featured_image', array('class' => 'form-spacing-top')) }}
 
-            {{ Form::label('body', 'Body:', ['class' => 'form-spacing-top']) }}
-            {{ Form::textarea('body', null, ['class' => 'form-control']) }}
+            {{ Form::textarea('body', null, ['class' => 'form-control form-spacing-top', 'placeholder' => 'Body']) }}
         </div>
 
         <div class="col-md-4">

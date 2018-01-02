@@ -17,18 +17,15 @@
 <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" class="background table1">
     <tr>
         <td align="center" valign="top" bgcolor="#F0F0F0" class="td1">
-            
+
             <table border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#FFFFFF" width="560"
                    class="container table3">
 
                 <tr>
                     <td align="center" valign="top" class="hero td3">
-                        <a target="_blank" style="text-decoration: none;"
-                           href="https://github.com/konsav/email-templates/">
-                            <img border="0" vspace="0" hspace="0"
-                                 src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-320709.png"
-                                 width="560" class="picture"/>
-                        </a>
+                        <img border="0" vspace="0" hspace="0"
+                             src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-320709.png"
+                             width="560" class="picture"/>
                     </td>
                 </tr>
 

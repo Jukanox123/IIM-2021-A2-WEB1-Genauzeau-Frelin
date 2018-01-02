@@ -1,5 +1,7 @@
 @extends('main')
 
+{{ Html::style('css/dog.css') }}
+
 @section('title', '| Homepage')
 
 @section('content')
@@ -12,19 +14,44 @@
     </div>
 
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-7 col-md-offset-5">
 
-            @foreach($posts as $post)
-
-                <div class="post">
-                    <h3>{{ $post->title }}</h3>
-                    <p>{{ substr($post->body, 0, 300) }}{{ strlen($post->body) > 300 ? "..." : "" }}</p>
-                    <a href="{{ url('blog/' . $post->slug) }}" class="btn btn-primary">Read More</a>
+            <div class="dog">
+                <div class="dog-body">
+                    <div class="dog-tail">
+                        <div class="dog-tail">
+                            <div class="dog-tail">
+                                <div class="dog-tail">
+                                    <div class="dog-tail">
+                                        <div class="dog-tail">
+                                            <div class="dog-tail">
+                                                <div class="dog-tail"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <hr>
+                <div class="dog-torso"></div>
+                <div class="dog-head">
+                    <div class="dog-ears">
+                        <div class="dog-ear"></div>
+                        <div class="dog-ear"></div>
+                    </div>
+                    <div class="dog-eyes">
+                        <div class="dog-eye"></div>
+                        <div class="dog-eye"></div>
+                    </div>
+                    <div class="dog-muzzle">
+                        <div class="dog-tongue"></div>
+                    </div>
+                </div>
+            </div>
 
-            @endforeach
-
+            <div class="ball" tabindex="0"></div>
+            
         </div>
     </div>
 @endsection
