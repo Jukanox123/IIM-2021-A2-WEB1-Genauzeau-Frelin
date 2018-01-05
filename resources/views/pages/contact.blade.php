@@ -5,7 +5,7 @@
 @section('content')
     <div class="row">
         <div class="col-md-12">
-            <h1 class="text-center">Contact Me</h1>
+            <h1 class="text-center">Contact Us</h1>
             <hr>
             <form action="{{ url('contact') }}" method="POST">
                 {{ csrf_field() }}
